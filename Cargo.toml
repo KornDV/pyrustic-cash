@@ -1,0 +1,12 @@
+[package]
+name = "pyrustic_cash"
+version = "0.1.0"
+authors = ["Dima Korneev <korteam@gmail.com>"]
+edition = "2022"
+[dependencies]
+[dependencies.pyo3]
+version = "0.13.2"
+features = ["extension-module"]
+[lib]
+name = "pyrustic_cash"
+crate-type = ["cdylib"]

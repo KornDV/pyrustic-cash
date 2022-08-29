@@ -1,4 +1,9 @@
+#!/usr/bin/env python
+from setuptools import dist
+dist.Distribution().fetch_build_eggs(['setuptools_rust'])
+
 from setuptools import find_packages, setup
+from setuptools_rust import Binding, RustExtension
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
@@ -13,12 +18,19 @@ setup(
     long_description_content_type="text/markdown",
     url="https://github.com/KornDV/pyrustic-cash",
     install_requires=[],
+    rust_extensions=[RustExtension(
+        ".pyrustic_cash.pyrustic_cash",
+        path="Cargo.toml", binding=Binding.PyO3)],
     packages=find_packages(exclude=("tests",)),
     classifiers=[
         "Development Status :: 4 - Beta",
         "Programming Language :: Python :: 3",
+        "Programming Language :: Rust",
         "Operating System :: OS Independent",
+        "Operating System :: POSIX",
+        "Operating System :: MacOS :: MacOS X",
     ],
+    zip_safe=False,
     python_requires='>=3',
     tests_require=['pytest'],
     entry_points={
