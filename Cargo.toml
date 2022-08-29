@@ -11,4 +11,4 @@ features = ["extension-module"]
 
 [lib]
 name = "pyrustic_cash"
-crate-type = ["rlib", "cdylib"]
+crate-type = ["cdylib"]

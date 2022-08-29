@@ -1,1 +1,1 @@
-from .pyrustic_cash import *
+from .rustic_cash import *
