@@ -23,18 +23,13 @@ setup(
         path="Cargo.toml", binding=Binding.PyO3)],
     packages=["pyrustic_cash"],
     classifiers=[
-        "Development Status :: 4 - Beta",
-        "Programming Language :: Python :: 3",
-        "Programming Language :: Rust",
-        "Operating System :: POSIX",
-        "Operating System :: MacOS :: MacOS X",
-    ],
-    zip_safe=False,
-    python_requires='>=3',
-    tests_require=['pytest'],
-    entry_points={
-        'console_scripts': [
-            'fib-number = pyrustic_cash.cmd.fib_numb:fib_numb',
+            "License :: OSI Approved :: MIT License",
+            "Development Status :: 3 - Alpha",
+            "Intended Audience :: Developers",
+            "Programming Language :: Python",
+            "Programming Language :: Rust",
+            "Operating System :: POSIX",
+            "Operating System :: MacOS :: MacOS X",
         ],
-    },
+    zip_safe=False,
 )
