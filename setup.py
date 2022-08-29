@@ -9,15 +9,14 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
-    name="pyrustic_cash",
-    version="0.0.1",
+    name="pyrustic-cash",
+    version="0.1",
     author="Dima Korneev",
     author_email="korteam7@gmail.com",
     description="Calculates position in accounts",
     long_description="Adjust exist positions in different accaunts with pending transaction and trades",
     long_description_content_type="text/markdown",
     url="https://github.com/KornDV/pyrustic-cash",
-    install_requires=[],
     rust_extensions=[RustExtension(
         ".pyrustic_cash.pyrustic_cash",
         path="Cargo.toml", binding=Binding.PyO3)],
