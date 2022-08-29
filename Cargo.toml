@@ -2,7 +2,7 @@
 name = "pyrustic_cash"
 version = "0.1.0"
 authors = ["Dima Korneev <korteam@gmail.com>"]
-edition = "2022"
+edition = "2018"
 [dependencies]
 [dependencies.pyo3]
 version = "0.13.2"
