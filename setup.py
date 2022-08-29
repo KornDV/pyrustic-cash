@@ -2,7 +2,7 @@
 from setuptools import dist
 dist.Distribution().fetch_build_eggs(['setuptools_rust'])
 
-from setuptools import find_packages, setup
+from setuptools import setup
 from setuptools_rust import Binding, RustExtension
 
 with open("README.md", "r") as fh:
@@ -21,12 +21,11 @@ setup(
     rust_extensions=[RustExtension(
         ".pyrustic_cash.pyrustic_cash",
         path="Cargo.toml", binding=Binding.PyO3)],
-    packages=find_packages(exclude=("tests",)),
+    packages=["pyrustic_cash"],
     classifiers=[
         "Development Status :: 4 - Beta",
         "Programming Language :: Python :: 3",
         "Programming Language :: Rust",
-        "Operating System :: OS Independent",
         "Operating System :: POSIX",
         "Operating System :: MacOS :: MacOS X",
     ],
