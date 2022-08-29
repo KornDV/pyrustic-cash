@@ -1,5 +1,8 @@
 from setuptools import find_packages, setup
 
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
 setup(
     name="pyrustic_cash",
     version="0.0.1",
