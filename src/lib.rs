@@ -7,7 +7,7 @@ fn say_hello() {
 }
 
 #[pymodule]
-fn flitton_fib_rs(_py: Python, m: &PyModule) -> PyResult<()> {
+fn pyrustic_cash(_py: Python, m: &PyModule) -> PyResult<()> {
     m.add_wrapped(wrap_pyfunction!(say_hello));
     Ok(())
 }
